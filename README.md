@@ -6,39 +6,45 @@ A clean, modern, interactive personal finance dashboard built with **React 18 + 
 
 ## Setup Instructions
 
-### Prerequisites
-- [Node.js 20+](https://nodejs.org/)
-- [pnpm](https://pnpm.io/) — install with `npm install -g pnpm`
 
 ### Installation
 
-```bash
-# Clone the repo and install dependencies from the workspace root
-pnpm install
-```
+## ⚙️ Setup Instructions
 
-### Run in Development
+### 1️⃣ Clone the repository
 
 ```bash
-# From the workspace root
-pnpm --filter @workspace/finance-dashboard run dev
+git clone <your-repo-url>
+cd finance-dashboard
 ```
 
-The dashboard will be available at `http://localhost:<PORT>` (port assigned by the environment).
+---
 
-### Build for Production
+### 2️⃣ Install dependencies
 
 ```bash
-pnpm --filter @workspace/finance-dashboard run build
+npm install
 ```
 
-Output goes to `artifacts/finance-dashboard/dist/public`.
+---
 
-### Type Check
+### 3️⃣ Fix common issues (IMPORTANT)
 
-```bash
-pnpm --filter @workspace/finance-dashboard run typecheck
+If you cloned from a monorepo, remove broken dependencies:
+
+#### Delete folder:
 ```
+lib/api-client-react
+```
+
+#### Remove from `package.json`:
+```json
+"@workspace/api-client-react": "workspace:*"
+```
+
+#### Remove from `tsconfig.json`:
+- Any `"paths"` pointing to `api-client-react`
+- Any `"references"` pointing to `api-client-react`
 
 ---
 
@@ -150,11 +156,11 @@ Role selection persists across page refreshes via localStorage.
 |-------|------------|
 | Framework | React 18 |
 | Build tool | Vite 7 |
-| Styling | Tailwind CSS v4 |
+| Styling | Tailwind CSS v3 |
 | Animations | Framer Motion |
 | Routing | Wouter |
 | Charts | Recharts |
-| Forms | React Hook Form + Zod |
+| Forms | React Hook Form  |
 | Components | Radix UI / shadcn/ui |
 | Icons | Lucide React |
 | Dates | date-fns |
