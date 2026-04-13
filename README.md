@@ -1,6 +1,6 @@
 # FinTrack — Finance Dashboard
 
-A clean, modern, interactive personal finance dashboard built with **React 18 + Vite** and **Tailwind CSS v4**.
+FinTrack is a fully frontend-only finance dashboard that requires no backend. All data is static mock data persisted via **localStorage**, making the app portable and instantly usable. A clean, modern, interactive personal finance dashboard built with **React 18 + Vite** and **Tailwind CSS v4**.
 
 ---
 
@@ -48,9 +48,6 @@ lib/api-client-react
 
 ---
 
-## Project Overview
-
-FinTrack is a fully frontend-only finance dashboard that requires no backend. All data is static mock data persisted via **localStorage**, making the app portable and instantly usable.
 
 ### Architecture
 
